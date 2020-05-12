@@ -19,6 +19,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
 	install_requires=[
-        'git+https://github.com/douglasmoraisdev/json_log#egg=json_log'
+        'git+https://github.com/douglasmoraisdev/json_log@master#egg=json_log-0.0.1'
     ]    
 )
