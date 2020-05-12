@@ -51,6 +51,8 @@ def log_func_time(applog, tuple_qtd_index=0, qtd_label=''):
             start = datetime.now()
             result = func(*args, **kwargs)
             end = datetime.now()
+            total_time = end-start
+            total_time = total_time.total_seconds()            
 
             # verifica se é uma funcao quantitativa
             qtd = _is_quantitative_method(result, tuple_qtd_index)
@@ -58,7 +60,7 @@ def log_func_time(applog, tuple_qtd_index=0, qtd_label=''):
             applog.time_metric(
                         message=f"Executando {func.__name__}", 
                         func_name=f"{func.__module__}.{func.__name__}", 
-                        total_time=str(end-start),
+                        total_time=total_time,
                         total_items=qtd,
                         total_label=qtd_label
             )
