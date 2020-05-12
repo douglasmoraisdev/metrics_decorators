@@ -18,7 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-	install_requires=[
+	dependency_links=[
         'git+https://github.com/douglasmoraisdev/json_log@master#egg=json_log-0.0.1'
     ]    
 )
